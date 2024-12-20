@@ -21,11 +21,11 @@ Data Analyst industry placement @ Stratim Regional Health Solutions
 Scientific Officer @ Griffith University, School of Environmental Science
 
 ## Projects
-###Cluster-Based Analysis of Socioeconomic and Healthcare Indicators in Maranoa: Insights for Targeted Intervention
+### Cluster-Based Analysis of Socioeconomic and Healthcare Indicators in Maranoa: Insights for Targeted Intervention
 - GITHUB url
 - details
 
-###Development of a new depth of anaesthesia index using stacked regression model
+### Development of a new depth of anaesthesia index using stacked regression model
 - GITHUB URL
 - details
 
