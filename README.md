@@ -90,7 +90,7 @@ Applied-analytics portfolio from a USQ industry placement examining healthcare a
 
 - Integrated ABS Census, NDIS, and National Health Survey data into a 480-record, 116-variable dataset
 - Linear regression predicting need for core assistance (R² = 0.57), with intervention simulations showing that NDIS provider increases alone produce near-zero effect without addressing geographic access
-- K-means + PCA clustering of Maranoa postcodes identified three structurally distinct subregions, Roma hub, mid-size remote, small remote — each with radically different practitioner-to-population ratios (1:172 vs 1:310 vs 1:129)
+- K-means + PCA clustering of Maranoa postcodes identified three structurally distinct subregions, Roma hub, mid-size remote, small remote, each with radically different practitioner-to-population ratios (1:172 vs 1:310 vs 1:129)
 - Statistical validation via Spearman, Kruskal-Wallis, and chi-square tests confirms the clustering captures genuine workforce inequity rather than noise
 
 `Python` `scikit-learn` `scipy.stats` `pandas` `seaborn` `KMeans` `PCA`
@@ -130,7 +130,7 @@ University of Southern Queensland
 
 **Bachelor of Science (Honours) — First Class** · 2018
 Griffith University · Australian Rivers Institute
-Honours thesis: *Effects of flooding on plant invasion pathways in subtropical riparian ecosystems (Logan River, QLD)* — supervised by Drs Samantha Capon and Catherine Leigh.
+Honours thesis: *Effects of flooding on plant invasion pathways in subtropical riparian ecosystems (Logan River, QLD)* supervised by Drs Samantha Capon and Catherine Leigh.
 
 ---
 
@@ -140,9 +140,9 @@ Honours thesis: *Effects of flooding on plant invasion pathways in subtropical r
 Built an end-to-end analytics ecosystem from scratch, i.e. automated ingestion, preprocessing, feature engineering, and reporting across sales, market, and customer-behaviour datasets. Contributed to a 22% profit margin increase and a title acquisitions.
 
 **Senior Scientific Officer** — *Griffith University* · Oct 2025 – Jan 2026
+Current: Co-designed a three-stage automated ML pipeline for freshwater bioacoustics, i.e. signal-processing pre-segmentation, deep-learning species recognition on hand-labelled spectrograms, and ensemble waterway-health classification.
 
-- Co-led a three-stage automated ML pipeline for freshwater bioacoustics, i.e. signal-processing pre-segmentation, deep-learning species recognition on hand-labelled spectrograms, and ensemble waterway-health classification (findings in preparation for publication)
-- Deployed an Azure ML pipeline (Event Hub, Data Lake, Data Factory, Synapse, Power BI) to classify field-collected samples into one of the fifteen Australian soil types, replacing manual laboratory workflows
+Deployed an Azure ML pipeline (Event Hub, Data Lake, Data Factory, Synapse, Power BI) to classify field-collected samples into one of the fifteen Australian soil types, replacing manual laboratory workflows
 
 **Scientific Officer & Technical Officer** — *Griffith University, School of Environmental Science* · Jun 2018 – Oct 2025
 Contributed as analyst and researcher across approximately forty research projects spanning freshwater ecology, riparian ecosystems, wetland monitoring, and soil science. Co-authored a front-cover publication in *Nature* (597, 77–81, 2021) identifying a previously unknown component of the global carbon cycle, with a companion piece in *The Conversation* (2021).
@@ -173,10 +173,12 @@ Combined three field surveys before and after a major flood, soil-seed-bank germ
 ## Talks & Presentations
 
 **Australian Freshwater Sciences Society** — Adelaide, 2018
+
 Presented honours research on flood-driven vegetation dynamics in subtropical riparian ecosystems. Awarded Best Honours Presentation.
 
 **Ecological Society of Australia** — Brisbane, 2018
-Presented honours research on plant invasion pathways in the flood-impacted riparian ecosystems of the Logan River.
+
+As above.
 
 ---
 
