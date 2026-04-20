@@ -57,7 +57,7 @@ Currently a Data Scientist at SkyNation Publishing · open to applied ML and dat
 
 Predicts four components of pasture biomass (green, dead, clover, total GDM in grams) from a single smartphone photograph combined with tabular field measurements. Trained on the CSIRO Pasture Biomass dataset (357 observations across five Australian states).
 
-- **Late-fusion multi-modal architecture** with AutoGluon `MultiModalPredictor` — a pretrained vision encoder processes the image, a parallel branch handles NDVI, sward height, season, state, and one-hot species presence, and the two representations are concatenated before the regression head
+- **Late-fusion multi-modal architecture** with AutoGluon `MultiModalPredictor`, a pretrained vision encoder processes the image, a parallel branch handles NDVI, sward height, season, state, and one-hot species presence, and the two representations are concatenated before the regression head
 - **Backbone comparison** across the AutoGluon default, Swin-Base, and EfficientNet-B4 identified the best encoder per target, the default backbone won on the commercially-relevant `GDM_g` (R² = 0.825), Swin-Base won on the low-signal `Dry_Dead_g`
 - **Log1p target transform** stabilises training on heavily right-skewed, zero-inflated targets
 - **5-fold cross-validation** on 357 samples yields a mean R² of 0.726 ± 0.036 on total green dry matter, i.e. the target most relevant to farm management
@@ -75,7 +75,7 @@ End-to-end supervised learning pipeline predicting next-day rainfall from 145,00
 - Time-aware chronological train/val/test splits to prevent data leakage
 - Multi-model grid search across Logistic Regression, Random Forest, and XGBoost with TimeSeriesSplit CV
 - Decision-threshold optimisation on the validation set to maximise F1
-- SHAP feature importance and probability-calibration diagnostics — humidity at 3 pm surfaces as the single strongest predictor
+- SHAP feature importance and probability-calibration diagnostics, humidity at 3 pm surfaces as the single strongest predictor
 - Interactive Streamlit prediction app, pytest unit tests, GitHub Actions CI
 
 **Test-set ROC-AUC: 0.85**
@@ -90,14 +90,14 @@ Applied-analytics portfolio from a USQ industry placement examining healthcare a
 
 - Integrated ABS Census, NDIS, and National Health Survey data into a 480-record, 116-variable dataset
 - Linear regression predicting need for core assistance (R² = 0.57), with intervention simulations showing that NDIS provider increases alone produce near-zero effect without addressing geographic access
-- K-means + PCA clustering of Maranoa postcodes identified three structurally distinct subregions — Roma hub, mid-size remote, small remote — each with radically different practitioner-to-population ratios (1:172 vs 1:310 vs 1:129)
+- K-means + PCA clustering of Maranoa postcodes identified three structurally distinct subregions, Roma hub, mid-size remote, small remote — each with radically different practitioner-to-population ratios (1:172 vs 1:310 vs 1:129)
 - Statistical validation via Spearman, Kruskal-Wallis, and chi-square tests confirms the clustering captures genuine workforce inequity rather than noise
 
 `Python` `scikit-learn` `scipy.stats` `pandas` `seaborn` `KMeans` `PCA`
 
 ---
 
-### 📊 [Global Layoffs Analysis — SQL & Power BI](https://github.com/kurtisnisbet/Global-Layoffs-Analysis)
+### [Global Layoffs Analysis — SQL & Power BI](https://github.com/kurtisnisbet/Global-Layoffs-Analysis)
 
 End-to-end analytics project examining 527,000 layoff records across 1,500+ companies and 31 industries (2020–2024), contextualised within the macroeconomic conditions of the period.
 
@@ -110,7 +110,7 @@ End-to-end analytics project examining 527,000 layoff records across 1,500+ comp
 
 ---
 
-### 🧠 [Stacked-Ensemble Depth-of-Anaesthesia Prediction](https://github.com/kurtisnisbet/Stacked-Ensemble-Depth-of-Anaesthesia)
+### [Stacked-Ensemble Depth-of-Anaesthesia Prediction](https://github.com/kurtisnisbet/Stacked-Ensemble-Depth-of-Anaesthesia)
 
 Stacked ensemble model for real-time depth-of-anaesthesia monitoring from EEG data, benchmarked against the clinical Bispectral Index (BIS) standard.
 
@@ -163,9 +163,9 @@ Co-authored front-cover paper identifying a previously unknown component of the 
 
 **Effects of flooding on plant invasion pathways in subtropical riparian ecosystems** — Griffith University · Australian Rivers Institute, 2018
 
-Bachelor of Science (Honours) thesis supervised by Drs Samantha Capon and Catherine Leigh. Investigated how extreme flooding shapes each stage of the plant-invasion pathway — transport, colonisation, establishment, and landscape spread — in the subtropical riparian zone of the Logan River, southeast Queensland.
+Bachelor of Science (Honours) thesis supervised by Drs Samantha Capon and Catherine Leigh. Investigated how extreme flooding shapes each stage of the plant-invasion pathway, i.e. transport, colonisation, establishment, and landscape spread, in the subtropical riparian zone of the Logan River, southeast Queensland.
 
-Combined three field surveys before and after a major flood, soil-seed-bank germination trials, a glasshouse experiment isolating non-flood stressors (allelochemicals and leaf-litter cover), and a hydrochory buoyancy experiment across five native and two invasive species (*Lantana camara*, *Ricinus communis*). Flooding reduced the extent and abundance of *L. camara* but promoted rapid colonisation by the highly buoyant *R. communis* — yielding directly actionable recommendations for post-flood weed management.
+Combined three field surveys before and after a major flood, soil-seed-bank germination trials, a glasshouse experiment isolating non-flood stressors (allelochemicals and leaf-litter cover), and a hydrochory buoyancy experiment across five native and two invasive species (*Lantana camara*, *Ricinus communis*). Flooding reduced the extent and abundance of *L. camara* but promoted rapid colonisation by the highly buoyant *R. communis*, yielding directly actionable recommendations for post-flood weed management.
 
 
 ---
