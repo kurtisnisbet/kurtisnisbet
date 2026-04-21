@@ -14,9 +14,9 @@
 
 ## About
 
-Eight years of environmental research (including a co-authored front-cover publication in *Nature*) followed by a Master of Data Science, completed while working full-time. I build end-to-end ML systems at the intersection of environmental science and modern data engineering: bioacoustics classifiers, computer-vision regression, production pipelines, MLOps infrastructure, and analytics dashboards.
+Eight years as an environmental scientist, followed by a Master of Data Science. I now build end-to-end ML systems at the intersection of environmental science and modern data engineering: bioacoustics classifiers, computer-vision regression, production pipelines, MLOps infrastructure, and analytics dashboards.
 
-Currently a Data Scientist at SkyNation Publishing · open to applied ML and data science roles.
+Currently a Data Scientist at SkyNation Publishing. Open to applied ML and data science roles.
 
 ---
 
@@ -125,7 +125,7 @@ Stacked ensemble model for real-time depth-of-anaesthesia monitoring from EEG da
 
 ## Education
 
-**Master of Data Science (Machine Learning and AI)** — *Distinction* · 2026
+**Master of Data Science (Artificial Intelligence & Machine Learning)** · 2026
 University of Southern Queensland
 
 **Bachelor of Science (Honours) — First Class** · 2018
