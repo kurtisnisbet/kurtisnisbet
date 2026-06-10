@@ -53,18 +53,15 @@ Currently a Data Scientist at SkyNation Publishing. Open to applied ML and data 
 
 ## Featured Projects
 
-### [Pasture Biomass Predictor — Multi-Modal Deep Learning](https://github.com/kurtisnisbet/pasture-biomass-predictor)
-
-Predicts four components of pasture biomass (green, dead, clover, total GDM in grams) from a single smartphone photograph combined with tabular field measurements. Trained on the CSIRO Pasture Biomass dataset (357 observations across five Australian states).
-
+### [FloraView — Multi-Modal Pasture Biomass Predictor](https://github.com/kurtisnisbet/FloraView)
+Predicts four components of pasture biomass (green, dead, clover, total GDM in grams) from a single smartphone photograph combined with tabular field measurements. Trained on the CSIRO Pasture Biomass dataset (357 observations across four Australian states). **[Live demo →](https://huggingface.co/spaces/kurtisnisbet/FloraView)**
 - **Late-fusion multi-modal architecture** with AutoGluon `MultiModalPredictor`, a pretrained vision encoder processes the image, a parallel branch handles NDVI, sward height, season, state, and one-hot species presence, and the two representations are concatenated before the regression head
 - **Backbone comparison** across the AutoGluon default, Swin-Base, and EfficientNet-B4 identified the best encoder per target, the default backbone won on the commercially-relevant `GDM_g` (R² = 0.825), Swin-Base won on the low-signal `Dry_Dead_g`
 - **Log1p target transform** stabilises training on heavily right-skewed, zero-inflated targets
 - **5-fold cross-validation** on 357 samples yields a mean R² of 0.726 ± 0.036 on total green dry matter, i.e. the target most relevant to farm management
 - **Azure ML GPU training** (Tesla T4 cluster, ~35× speedup over local CPU) with MLflow experiment tracking
-
-`Python` `AutoGluon` `PyTorch` `Azure ML` `MLflow` `scikit-learn` `pandas` `matplotlib`
-
+- **Containerised and deployed** as a Gradio web app on HuggingFace Spaces (Docker, free CPU tier); to fit the 1 GB storage limit the demo serves total GDM plus clover — total living biomass and a key species — and derives green biomass for free as `GDM − clover`
+`Python` `AutoGluon` `PyTorch` `Azure ML` `MLflow` `scikit-learn` `pandas` `matplotlib` `Gradio` `Docker` `HuggingFace` `Git LFS`
 ---
 
 ### [Full-Stack Machine Learning Pipeline — Australian Rainfall Prediction](https://github.com/kurtisnisbet/Full-Stack-Machine-Learning-Pipeline)
