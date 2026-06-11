@@ -14,9 +14,9 @@
 
 ## About
 
-Eight years as an environmental scientist, followed by a Master of Data Science. I now build end-to-end ML systems at the intersection of environmental science and modern data engineering: bioacoustics classifiers, computer-vision regression, production pipelines, MLOps infrastructure, and analytics dashboards.
+Eight years in the environmental sciences, a front-cover *Nature* publication, followed by a Master of Data Science (AI & Machine Learning). I build end-to-end ML systems that make sense of complex data: multi-modal deep learning, production pipelines, MLOps infrastructure, and analytics dashboards, with a particular interest in applying them to environmental problems.
 
-Currently a Data Scientist at SkyNation Publishing. Open to applied ML and data science roles.
+Currently a Data Scientist at SkyNation Publishing. Exploring roles and collaborations in environmental data science.
 
 ---
 
@@ -54,28 +54,31 @@ Currently a Data Scientist at SkyNation Publishing. Open to applied ML and data 
 ## Featured Projects
 
 ### [FloraView — Multi-Modal Pasture Biomass Predictor](https://github.com/kurtisnisbet/FloraView)
-Predicts four components of pasture biomass (green, dead, clover, total GDM in grams) from a single smartphone photograph combined with tabular field measurements. Trained on the CSIRO Pasture Biomass dataset (357 observations across four Australian states). **[Live demo →](https://huggingface.co/spaces/kurtisnisbet/FloraView)**
-- **Late-fusion multi-modal architecture** with AutoGluon `MultiModalPredictor`, a pretrained vision encoder processes the image, a parallel branch handles NDVI, sward height, season, state, and one-hot species presence, and the two representations are concatenated before the regression head
-- **Backbone comparison** across the AutoGluon default, Swin-Base, and EfficientNet-B4 identified the best encoder per target, the default backbone won on the commercially-relevant `GDM_g` (R² = 0.825), Swin-Base won on the low-signal `Dry_Dead_g`
+
+Predicts four components of pasture biomass (green, dead, clover, total green dry matter in grams) from a smartphone photograph combined with tabular field measurements, trained on the CSIRO Pasture Biomass dataset (357 observations across four Australian states). **[Live demo →](https://huggingface.co/spaces/kurtisnisbet/FloraView)**
+
+- **Late-fusion multi-modal architecture** (AutoGluon `MultiModalPredictor`): a pretrained vision encoder processes the image, a parallel branch handles NDVI, sward height, season, state, and species indicators, and the representations are fused before the regression head
+- **Backbone comparison** across the AutoGluon default, Swin-Base, and EfficientNet-B4 identified the best encoder per target — the default won on the commercially relevant `GDM_g` (R² = 0.825 single split; 0.726 ± 0.036 under 5-fold CV)
 - **Log1p target transform** stabilises training on heavily right-skewed, zero-inflated targets
-- **5-fold cross-validation** on 357 samples yields a mean R² of 0.726 ± 0.036 on total green dry matter, i.e. the target most relevant to farm management
-- **Azure ML GPU training** (Tesla T4 cluster, ~35× speedup over local CPU) with MLflow experiment tracking
-- **Containerised and deployed** as a Gradio web app on HuggingFace Spaces (Docker, free CPU tier); to fit the 1 GB storage limit the demo serves total GDM plus clover — total living biomass and a key species — and derives green biomass for free as `GDM − clover`
-`Python` `AutoGluon` `PyTorch` `Azure ML` `MLflow` `scikit-learn` `pandas` `matplotlib` `Gradio` `Docker` `HuggingFace` `Git LFS`
+- **Azure ML GPU training** (Tesla T4 cluster) with MLflow experiment tracking and a local CPU smoke-test pipeline
+- **Containerised and deployed** as a Gradio web app on HuggingFace Spaces (Docker, free CPU tier); to fit the 1 GB storage limit the demo serves the GDM and clover models and derives green biomass as `GDM − clover`
+
+`Python` `AutoGluon` `PyTorch` `Azure ML` `MLflow` `scikit-learn` `pandas` `Gradio` `Docker` `HuggingFace` `Git LFS`
+
 ---
 
 ### [Full-Stack Machine Learning Pipeline — Australian Rainfall Prediction](https://github.com/kurtisnisbet/Full-Stack-Machine-Learning-Pipeline)
 
-End-to-end supervised learning pipeline predicting next-day rainfall from 145,000 Australian weather observations. Built from scratch without AutoML to develop a thorough understanding of each pipeline component.
+End-to-end supervised learning pipeline predicting next-day rainfall from 145,000 Australian weather observations (2007–2017). Built from scratch without AutoML to develop a thorough understanding of each pipeline component.
 
 - Config-driven YAML architecture; no hardcoded parameters anywhere in the pipeline
-- Time-aware chronological train/val/test splits to prevent data leakage
-- Multi-model grid search across Logistic Regression, Random Forest, and XGBoost with TimeSeriesSplit CV
-- Decision-threshold optimisation on the validation set to maximise F1
-- SHAP feature importance and probability-calibration diagnostics, humidity at 3 pm surfaces as the single strongest predictor
-- Interactive Streamlit prediction app, pytest unit tests, GitHub Actions CI
+- Chronological train/val/test splits so models are always evaluated on later, unseen data
+- Multi-model grid search across Logistic Regression, Random Forest, and XGBoost (optional TimeSeriesSplit CV)
+- Decision-threshold optimisation on the validation set, applied at inference in the app
+- SHAP feature importance and probability-calibration diagnostics — 3 pm humidity surfaces as the single strongest predictor
+- Interactive Streamlit prediction app, 33 pytest unit tests, GitHub Actions CI
 
-**Test-set ROC-AUC: 0.85**
+**Final model (XGBoost) test-set ROC-AUC: 0.874**
 
 `Python` `scikit-learn` `XGBoost` `SHAP` `pandas` `Parquet` `Streamlit` `pytest` `GitHub Actions`
 
@@ -85,10 +88,10 @@ End-to-end supervised learning pipeline predicting next-day rainfall from 145,00
 
 Applied-analytics portfolio from a USQ industry placement examining healthcare access across four rural LGAs in South-West Queensland (Maranoa, Murweh, Quilpie, Western Downs).
 
-- Integrated ABS Census, NDIS, and National Health Survey data into a 480-record, 116-variable dataset
-- Linear regression predicting need for core assistance (R² = 0.57), with intervention simulations showing that NDIS provider increases alone produce near-zero effect without addressing geographic access
-- K-means + PCA clustering of Maranoa postcodes identified three structurally distinct subregions, Roma hub, mid-size remote, small remote, each with radically different practitioner-to-population ratios (1:172 vs 1:310 vs 1:129)
-- Statistical validation via Spearman, Kruskal-Wallis, and chi-square tests confirms the clustering captures genuine workforce inequity rather than noise
+- Integrated ABS Census, NDIS, and National Health Survey data into a 540-record, 116-variable dataset
+- Linear regression predicting need for core assistance (R² = 0.57), with intervention simulations showing that increasing NDIS providers or health employment alone produces near-zero change in predicted need
+- K-means + PCA clustering of Maranoa postcodes identified three structurally distinct subregions — the Roma hub, mid-size remote towns, and small remote settlements averaging only 1–2 practitioners each
+- Statistical validation via Spearman, Kruskal-Wallis, and chi-square tests supports the clustering as capturing real workforce distribution differences rather than noise
 
 `Python` `scikit-learn` `scipy.stats` `pandas` `seaborn` `KMeans` `PCA`
 
@@ -96,11 +99,11 @@ Applied-analytics portfolio from a USQ industry placement examining healthcare a
 
 ### [Global Layoffs Analysis — SQL & Power BI](https://github.com/kurtisnisbet/Global-Layoffs-Analysis)
 
-End-to-end analytics project examining 527,000 layoff records across 1,500+ companies and 31 industries (2020–2024), contextualised within the macroeconomic conditions of the period.
+End-to-end analytics project examining 527,051 reported layoffs across 1,573 companies and 31 industries (March 2020 – June 2024), contextualised within the macroeconomic conditions of the period.
 
-- Multi-stage SQL cleaning pipeline using staging tables, `ROW_NUMBER()` deduplication, and self-joins for null propagation
+- Multi-stage SQL cleaning pipeline using staging tables, `ROW_NUMBER()` deduplication, and self-joins for null propagation (3,642 raw records → 2,155 cleaned)
 - Exploratory analysis across time, industry, geography, and funding stage
-- Key finding: 51 companies with $10 B+ in collective funding still underwent 100% workforce reduction, capital raised is a poor predictor of survival
+- Key finding: 51 companies with $10 B in collective funding still underwent 100% workforce reduction — capital raised is a poor predictor of survival
 - Power BI dashboard surfacing temporal trends, sector rankings, and geographic distribution
 
 `SQL` `MySQL` `Power BI` `Data Cleaning` `EDA`
@@ -122,27 +125,28 @@ Stacked ensemble model for real-time depth-of-anaesthesia monitoring from EEG da
 
 ## Education
 
-**Master of Data Science (Artificial Intelligence & Machine Learning)** · 2026
+**Master of Data Science (Artificial Intelligence & Machine Learning)** · 2023 – 2026
 University of Southern Queensland
 
-**Bachelor of Science (Honours) — First Class** · 2018
+**Bachelor of Science (Honours) — First Class** · 2014 – 2018
 Griffith University · Australian Rivers Institute
-Honours thesis: *Effects of flooding on plant invasion pathways in subtropical riparian ecosystems (Logan River, QLD)* supervised by Drs Samantha Capon and Catherine Leigh.
+Honours thesis: *Effects of flooding on plant invasion pathways in subtropical riparian ecosystems (Logan River, QLD)*, supervised by Drs Samantha Capon and Catherine Leigh.
 
 ---
 
 ## Work Experience
 
-**Data Scientist** — *SkyNation Publishing* · Sep 2024 – present *(independent contractor)*
-Built an end-to-end analytics ecosystem from scratch, i.e. automated ingestion, preprocessing, feature engineering, and reporting across sales, market, and customer-behaviour datasets. Contributed to a 22% profit margin increase and a title acquisitions.
+**Data Scientist** — *SkyNation Publishing* · Jan 2026 – present
+Replaced manual spreadsheet workflows with automated, version-controlled pipelines across sales, marketing, and customer data. Architected three MLOps pipelines covering social sentiment analysis, audience segmentation, and sales forecasting, and built customer classification and clustering models to inform pricing strategy.
 
-**Senior Scientific Officer** — *Griffith University* · Oct 2025 – Jan 2026
-Current: Co-designed a three-stage automated ML pipeline for freshwater bioacoustics, i.e. signal-processing pre-segmentation, deep-learning species recognition on hand-labelled spectrograms, and ensemble waterway-health classification.
+**Scientific Officer & Senior Scientific Officer** — *Griffith University, School of Environmental Science* · Jun 2019 – Jan 2026
+Provided scientific and analytical support across more than forty research projects spanning freshwater ecology, riparian ecosystems, wetland monitoring, and soil science. Co-authored a front-cover publication in *Nature* (597, 77–81, 2021) identifying a previously unknown component of the global carbon cycle. Deployed an Azure-based ML pipeline (Event Hub, Data Lake, Azure ML, Data Factory, Synapse, Power BI) to automate soil-type classification, replacing manual laboratory workflows, and co-designed a three-stage automated ML pipeline for freshwater bioacoustics: signal-processing pre-segmentation, deep-learning species recognition on hand-labelled spectrograms, and ensemble waterway-health classification.
 
-Deployed an Azure ML pipeline (Event Hub, Data Lake, Data Factory, Synapse, Power BI) to classify field-collected samples into one of the fifteen Australian soil types, replacing manual laboratory workflows
+**Technical Officer** — *Griffith University* · Jun 2018 – Jun 2019
+Supported laboratory operations and teaching across the environmental sciences, delivering training to approximately 300 students in laboratory and field settings and mentoring junior scientists in experimental design, safety, and scientific practice.
 
-**Scientific Officer & Technical Officer** — *Griffith University, School of Environmental Science* · Jun 2018 – Oct 2025
-Contributed as analyst and researcher across approximately forty research projects spanning freshwater ecology, riparian ecosystems, wetland monitoring, and soil science. Co-authored a front-cover publication in *Nature* (597, 77–81, 2021) identifying a previously unknown component of the global carbon cycle, with a companion piece in *The Conversation* (2021).
+**Research Assistant** — *Griffith University* · Sep 2017 – Mar 2018
+Contributed to environmental research projects across data collection, statistical analysis, and predictive modelling.
 
 ---
 
@@ -160,26 +164,29 @@ Co-authored front-cover paper identifying a previously unknown component of the 
 
 **Effects of flooding on plant invasion pathways in subtropical riparian ecosystems** — Griffith University · Australian Rivers Institute, 2018
 
-Bachelor of Science (Honours) thesis supervised by Drs Samantha Capon and Catherine Leigh. Investigated how extreme flooding shapes each stage of the plant-invasion pathway, i.e. transport, colonisation, establishment, and landscape spread, in the subtropical riparian zone of the Logan River, southeast Queensland.
-
-Combined three field surveys before and after a major flood, soil-seed-bank germination trials, a glasshouse experiment isolating non-flood stressors (allelochemicals and leaf-litter cover), and a hydrochory buoyancy experiment across five native and two invasive species (*Lantana camara*, *Ricinus communis*). Flooding reduced the extent and abundance of *L. camara* but promoted rapid colonisation by the highly buoyant *R. communis*, yielding directly actionable recommendations for post-flood weed management.
-
+Investigated how extreme flooding shapes each stage of the plant-invasion pathway — transport, colonisation, establishment, and landscape spread — in the subtropical riparian zone of the Logan River, southeast Queensland. Combined three field surveys before and after a major flood, soil-seed-bank germination trials, a glasshouse experiment isolating non-flood stressors, and a hydrochory buoyancy experiment across five native and two invasive species (*Lantana camara*, *Ricinus communis*). Flooding reduced the extent and abundance of *L. camara* but promoted rapid colonisation by the highly buoyant *R. communis*, yielding directly actionable recommendations for post-flood weed management.
 
 ---
 
 ## Talks & Presentations
 
 **Australian Freshwater Sciences Society** — Adelaide, 2018
-
 Presented honours research on flood-driven vegetation dynamics in subtropical riparian ecosystems. Awarded Best Honours Presentation.
 
 **Ecological Society of Australia** — Brisbane, 2018
-
 As above.
 
 ---
 
 <div align="center">
+
+### Let's connect
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kurtisnisbet)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kurtisnisbet@outlook.com)
+
+</div>
+
 
 ### Let's connect
 
