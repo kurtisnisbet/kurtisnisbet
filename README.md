@@ -137,15 +137,19 @@ Honours thesis: *Effects of flooding on plant invasion pathways in subtropical r
 ## Work Experience
 
 **Data Scientist** — *SkyNation Publishing* · Jan 2026 – present
+
 Replaced manual spreadsheet workflows with automated, version-controlled pipelines across sales, marketing, and customer data. Architected three MLOps pipelines covering social sentiment analysis, audience segmentation, and sales forecasting, and built customer classification and clustering models to inform pricing strategy.
 
 **Scientific Officer & Senior Scientific Officer** — *Griffith University, School of Environmental Science* · Jun 2019 – Jan 2026
+
 Provided scientific and analytical support across more than forty research projects spanning freshwater ecology, riparian ecosystems, wetland monitoring, and soil science. Co-authored a front-cover publication in *Nature* (597, 77–81, 2021) identifying a previously unknown component of the global carbon cycle. Deployed an Azure-based ML pipeline (Event Hub, Data Lake, Azure ML, Data Factory, Synapse, Power BI) to automate soil-type classification, replacing manual laboratory workflows, and co-designed a three-stage automated ML pipeline for freshwater bioacoustics: signal-processing pre-segmentation, deep-learning species recognition on hand-labelled spectrograms, and ensemble waterway-health classification.
 
 **Technical Officer** — *Griffith University* · Jun 2018 – Jun 2019
+
 Supported laboratory operations and teaching across the environmental sciences, delivering training to approximately 300 students in laboratory and field settings and mentoring junior scientists in experimental design, safety, and scientific practice.
 
 **Research Assistant** — *Griffith University* · Sep 2017 – Mar 2018
+
 Contributed to environmental research projects across data collection, statistical analysis, and predictive modelling.
 
 ---
