@@ -67,7 +67,7 @@ Predicts four components of pasture biomass (green, dead, clover, total green dr
 
 ---
 
-### [Australian Rainfall Model - Full-Stack Machine Learning Pipeline](https://github.com/kurtisnisbet/Australian Rainfall Model)
+### [Australian Rainfall Model - Full-Stack Machine Learning Pipeline](https://github.com/kurtisnisbet/Australian-Rainfall-Model)
 
 End-to-end supervised learning pipeline predicting next-day rainfall from 145,000 Australian weather observations (2007–2017). Built from scratch without AutoML to develop a thorough understanding of each pipeline component.
 
