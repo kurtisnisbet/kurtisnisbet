@@ -13,9 +13,9 @@
 
 ## About
 
-Eight years in the environmental sciences, a front-cover *Nature* publication, followed by a Master of Data Science (AI & Machine Learning). I build end-to-end ML systems that make sense of complex data: multi-modal deep learning, production pipelines, MLOps infrastructure, and analytics dashboards, with a particular interest in applying them to environmental problems.
+Eight years in the environmental sciences, a front-cover *Nature* publication, followed by a Master of Data Science (AI & Machine Learning). In my day to day, I build end-to-end ML systems with a particular interest in applying them to agricultural and environmental problems.
 
-Currently a Data Scientist at SkyNation Publishing. Exploring roles and collaborations in environmental data science.
+Currently a Data Scientist at SkyNation Publishing. Exploring roles and collaborations in agricultural, environmental, and commercial data science.
 
 ---
 
