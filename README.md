@@ -15,7 +15,7 @@
 
 Eight years in the environmental sciences, a front-cover *Nature* publication, followed by a Master of Data Science (AI & Machine Learning). In my day to day, I build end-to-end ML systems with a particular interest in applying them to agricultural and environmental problems.
 
-Currently a Data Scientist at SkyNation Publishing. Exploring roles and collaborations in agricultural, environmental, and commercial data science.
+Currently a Data Scientist at SkyNation Publishing. Exploring roles and collaborations in agricultural, environmental, and government data science.
 
 ---
 
@@ -56,11 +56,11 @@ Currently a Data Scientist at SkyNation Publishing. Exploring roles and collabor
 
 Predicts four components of pasture biomass (green, dead, clover, total green dry matter in grams) from a smartphone photograph combined with tabular field measurements, trained on the CSIRO Pasture Biomass dataset (357 observations across four Australian states). **[Live demo →](https://huggingface.co/spaces/kurtisnisbet/FloraView)**
 
-- **Late-fusion multi-modal architecture** (AutoGluon `MultiModalPredictor`): a pretrained vision encoder processes the image, a parallel branch handles NDVI, sward height, season, state, and species indicators, and the representations are fused before the regression head
-- **Backbone comparison** across the AutoGluon default, Swin-Base, and EfficientNet-B4 identified the best encoder per target — the default won on the commercially relevant `GDM_g` (R² = 0.825 single split; 0.726 ± 0.036 under 5-fold CV)
-- **Log1p target transform** stabilises training on heavily right-skewed, zero-inflated targets
-- **Azure ML GPU training** (Tesla T4 cluster) with MLflow experiment tracking and a local CPU smoke-test pipeline
-- **Containerised and deployed** as a Gradio web app on HuggingFace Spaces (Docker, free CPU tier); to fit the 1 GB storage limit the demo serves the GDM and clover models and derives green biomass as `GDM − clover`
+- Late-fusion multi-modal architecture (AutoGluon `MultiModalPredictor`): a pretrained vision encoder processes the image, a parallel branch handles NDVI, sward height, season, state, and species indicators, and the representations are fused before the regression head
+- Backbone comparison across the AutoGluon default, Swin-Base, and EfficientNet-B4 identified the best encoder per target — the default won on the commercially relevant `GDM_g` (R² = 0.825 single split; 0.726 ± 0.036 under 5-fold CV)
+- Log1p target transform stabilises training on heavily right-skewed, zero-inflated targets
+- Azure ML GPU training (Tesla T4 cluster) with MLflow experiment tracking and a local CPU smoke-test pipeline
+- Containerised and deployed as a Gradio web app on HuggingFace Spaces (Docker, free CPU tier); to fit the 1 GB storage limit the demo serves the GDM and clover models and derives green biomass as `GDM − clover`
 
 `Python` `AutoGluon` `PyTorch` `Azure ML` `MLflow` `scikit-learn` `pandas` `Gradio` `Docker` `HuggingFace` `Git LFS`
 
@@ -113,9 +113,9 @@ End-to-end analytics project examining 527,051 reported layoffs across 1,573 com
 
 Stacked ensemble model for real-time depth-of-anaesthesia monitoring from EEG data, benchmarked against the clinical Bispectral Index (BIS) standard.
 
-- **RFECV with SVR** reduces 7 EEG features to the 3 most predictive
-- **MLP** (2 hidden layers, early stopping) captures non-linear relationships that SVR misses
-- **Stacking ensemble** (MLP + SVR → linear meta-model) weights NN at 63% and SVR at 37%, indicating complementary model strengths, while keeping inference cheap enough for real-time surgical use
+- RFECV with SVR** reduces 7 EEG features to the 3 most predictive
+- MLP** (2 hidden layers, early stopping) captures non-linear relationships that SVR misses
+- Stacking ensemble (MLP + SVR → linear meta-model) weights NN at 63% and SVR at 37%, indicating complementary model strengths, while keeping inference cheap enough for real-time surgical use
 - Outperforms the SVR baseline: R² 0.85 vs 0.78, MSE 64 vs 92
 
 `Python` `scikit-learn` `MLPRegressor` `SVR` `StackingRegressor` `RFECV` `GridSearchCV`
@@ -137,19 +137,24 @@ Honours thesis: *Effects of flooding on plant invasion pathways in subtropical r
 
 **Data Scientist** — *SkyNation Publishing* · Jan 2026 – present
 
-Replaced manual spreadsheet workflows with automated, version-controlled pipelines across sales, marketing, and customer data. Architected three MLOps pipelines covering social sentiment analysis, audience segmentation, and sales forecasting, and built customer classification and clustering models to inform pricing strategy.
+- Increased profits by 22% by establishing data infrastructure with automated processes and human-in-theloop review, calling data from multiple APIs, then cleaning, analysing, and displaying it on a Streamlit dashboard in semi-real-time.
+- Led the transition of the company's live data infrastructure, working with existing staff and without disruption to business operations, introducing version control and automated testing with alert triggers, which had not previously existed at the company. 
+- Increased sales by 15% for premium products by modelling customer behaviour and preferences, identifying pricing tolerances using factorial analysis of variance, post-hoc testing, and multiple regression methods.
+- Informed two title acquisitions by engaging the executive team early and often to build positive relationships, understand the business needs, and ensure my analytics were adopted into the decisionmaking processes.
 
 **Scientific Officer & Senior Scientific Officer** — *Griffith University, School of Environmental Science* · Jun 2019 – Jan 2026
 
-Provided scientific and analytical support across more than forty research projects spanning freshwater ecology, riparian ecosystems, wetland monitoring, and soil science. Co-authored a front-cover publication in *Nature* (597, 77–81, 2021) identifying a previously unknown component of the global carbon cycle. Deployed an Azure-based ML pipeline (Event Hub, Data Lake, Azure ML, Data Factory, Synapse, Power BI) to automate soil-type classification, replacing manual laboratory workflows, and co-designed a three-stage automated ML pipeline for freshwater bioacoustics: signal-processing pre-segmentation, deep-learning species recognition on hand-labelled spectrograms, and ensemble waterway-health classification.
+- Co-authored a front-cover Nature publication (597, 77–81, 2021), a 55-site, 6-continent experiment attributing ~29% of global deadwood carbon flux (10.9 ± 3.2 Pg C/yr) to insects; managed the Australian field site across the multi-year collection
+- Directly supported the publication of papers from approximately forty research projects as an individual contributor, collaborating with academics and researchers to apply data science and statistical methods to their datasets. 
+- Managed laboratory instrumentation and scientific equipment to ISO 17025 standards, maintaining audit trails, quality control, and safety and regulatory compliance.
 
 **Technical Officer** — *Griffith University* · Jun 2018 – Jun 2019
 
-Supported laboratory operations and teaching across the environmental sciences, delivering training to approximately 300 students in laboratory and field settings and mentoring junior scientists in experimental design, safety, and scientific practice.
+- Saved around 300 staff-hours a year by establishing an ETL workflow on laboratory instrumentation (spectrophotometers) to automatically log and prepare data for automated classification and regression outputs, supported by a visualisation dashboard.
 
 **Research Assistant** — *Griffith University* · Sep 2017 – Mar 2018
 
-Contributed to environmental research projects across data collection, statistical analysis, and predictive modelling.
+- Statistical analysis and predictive modelling across environmental research projects, from data collection through reported findings
 
 ---
 
