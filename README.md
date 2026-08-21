@@ -13,9 +13,9 @@
 
 ## About
 
-Data scientist with eight years of experience in environmental and earth data analytics at Griffith University, with a front-cover publication in Nature. Qualified with a Master of Data Science (Artificial Intelligence & Machine Learning). Specialty in computer vision, remote sensing, geospatial analysis, forecast series, and environmental modelling, and can work across the entire project lifecycle from stakeholder engagement to deployment.
+I am an experienced data scientist and formally trained scientist, with a passion for uncovering insights in the data space. I have a proven track record of establishing data infrastructure and practices from the ground up in business contexts, and I look forward to the opportunities to dig deeply into the data to drive smart decisions.
 
-Open to data science, ML engineering, and government analytics roles, remote or Brisbane-based.
+Currently targeting business intelligence, data science, or ML/AI roles in Brisbane, or Australia (if remote).
 
 ---
 
