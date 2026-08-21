@@ -120,19 +120,6 @@ Applied-analytics project from a USQ industry placement examining healthcare acc
 
 ---
 
-### [Global Layoffs Analysis — SQL & Power BI](https://github.com/kurtisnisbet/Global-Layoffs-Analysis)
-
-Analytics project examining 527,051 reported layoffs across 1,573 companies and 31 industries (March 2020 – June 2024), set against the macroeconomic conditions of the period.
-
-- Multi-stage SQL cleaning pipeline using staging tables, `ROW_NUMBER()` deduplication, and self-joins for null propagation (3,642 raw records to 2,155 cleaned)
-- Exploratory analysis across time, industry, geography, and funding stage
-- Key finding: 51 companies holding $10 B in collective funding still underwent 100% workforce reduction, so capital raised is a poor predictor of survival
-- Power BI dashboard surfacing temporal trends, sector rankings, and geographic distribution
-
-`SQL` `MySQL` `Power BI` `Data Cleaning` `EDA`
-
----
-
 ### [Stacked-Ensemble Depth-of-Anaesthesia Index](https://github.com/kurtisnisbet/Depth-of-Anaesthesia)
 
 Regression models predicting the Bispectral Index (BIS), the clinical depth-of-anaesthesia measure, from seven EEG-derived features. Completed for the Master of Data Science. Train and test are split by recording, so the two never share a session.
@@ -151,22 +138,21 @@ Regression models predicting the Bispectral Index (BIS), the clinical depth-of-a
 
 **Data Scientist** — *SkyNation Publishing* (contract) · Jan 2026 – present
 
-- Increased profit margin 22% by building the data infrastructure that merges multiple APIs into SQL to be analysed, with insights visualised in a Streamlit dashboard updated twice weekly
-- Raised premium product sales 15% by modelling pricing tolerance with factorial ANOVA and multiple regression
-- Informed two title acquisitions by embedding analytics into executive decision-making early and often
-- Established version control, automated testing, and alert triggers on a live pipeline, replacing manual processes that had not previously existed at the company
+- Design, build, test, and deploy automated data ingestion from Meta, Shopify, and Google Analytics to a centralised Supabase SQL Store. Used to create a BI dashboard. Insights increased profit margin 22%.
+- Maintain positive working relationships with other staff, collaborate on ad-hoc analytics requests and relay findings in a timely fashion. Led workshop sessions to communicate findings, informing two title acquisitions.
+- Design, collect, and analyse results from a SharePoint consume
 
 **Senior Scientific Officer** — *Griffith University* · Oct 2025 – Jan 2026
 
-- Supervised and mentored a team of two specialists across four data projects
-- Designed and deployed an end-to-end machine-learning pipeline for an environmental monitoring program, carrying raw sensor data through to classified outputs in production
+- Supervised a project to grade waterway health in suburban creeks using automatic data collected with remote sensors, saved to a data lake before transformation in Microsoft Fabric, then tested against our PyTorch model in Azure ML
+- Bioacoustic remote sensor data preprocessed using a custom Python script to remove silences when one of three trigger conditions was met. Sounds were spliced from background noise, and used to train the first CNN to an AUC-ROC of 0.87. Species data was then joined with environmental data to predict waterway health to an AUC-ROC of 0.81, resulting in a classification rating similar to the Healthy Land and Water Brisbane River rating 
 
 **Scientific and Technical Officer** — *Griffith University* · Jun 2018 – Oct 2025
 
-- Co-authored a front-cover *Nature* publication (597, 77–81, 2021), a 55-site, six-continent experiment that first quantified annual deadwood carbon release at 10.9 billion tonnes, around 115% of annual global fossil-fuel emissions, with roughly 29% of it attributable to insects. Co-designed the nested spatiotemporal mixed-effects model and managed the Australian field site across the multi-year collection
-- Supported the publication of work from roughly forty research projects as an individual contributor, applying data science and statistical methods to other researchers' datasets
-- Saved around 300 staff-hours a year by automating instrument-to-report ETL workflows on laboratory spectrophotometers, with a visualisation dashboard
-- Maintained two environmental laboratories to ISO 17025, with audit trails, quality control, and regulatory compliance
+- Solved a large inefficiency in data analysis from data collected on UV-visible light spectrophotometers. Using GitHub Actions and Fabric, automated data ingestion, cleaning, and analysis, saved to Databricks and displayed on a Power BI dashboard. Saved 300+ staff-hours a year.
+- Managed the largest rainfall simulator in the Southern Hemisphere (GUTSR) to collect data on extreme rainfall events. Used data to analyse and predict erosion rates with respect to rainfall duration, intensity, soil types, slope angle, etc.
+- Collaborated with internal stakeholders and external organisations across 40+ research and technical projects. Diverse skillset across a broad range of topics, and ability to acquire new skills quickly
+
 
 **Scientific Consultant** — *SkyNation Publishing* (contract) · Sep 2024 – present
 
